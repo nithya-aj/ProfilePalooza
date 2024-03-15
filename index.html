@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ProfilePalooza</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container" :class="gender">
+        <button v-on:click="getRandomUser()">
+          <div class="svg" :class="gender">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="23"
+              height="23"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M 7.1601562 3 L 8.7617188 5 L 18 5 C 18.551 5 19 5.448 19 6 L 19 15 L 16 15 L 20 20 L 24 15 L 21 15 L 21 6 C 21 4.346 19.654 3 18 3 L 7.1601562 3 z M 4 4 L 0 9 L 3 9 L 3 18 C 3 19.654 4.346 21 6 21 L 16.839844 21 L 15.238281 19 L 6 19 C 5.449 19 5 18.552 5 18 L 5 9 L 8 9 L 4 4 z"
+              ></path>
+            </svg>
+          </div>
+        </button>
+
+        <img :src="userImg" alt="userImg" />
+        <h1>{{firstName}} {{lastName}}</h1>
+        <h3>Email : {{email}}</h3>
+        <h3>Age : {{age}}</h3>
+        <h3>Gender : {{gender}}</h3>
+        <h3>City : {{city}}</h3>
+        <h3>State : {{state}}</h3>
+        <h3>Country : {{country}}</h3>
+        <h3>Mobile : {{mobile}}</h3>
+        <h3>Address : {{streetNo}} {{streetName}}</h3>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
